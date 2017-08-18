@@ -819,7 +819,7 @@
                                                                 </subviews>
                                                             </clipView>
                                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="w05-GZ-64Q">
-                                                                <rect key="frame" x="1" y="649" width="357" height="16"/>
+                                                                <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ETW-Xa-TLQ">
@@ -860,7 +860,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="AMY-2a-8xS" id="DvD-7r-mjh"/>
+                        <outlet property="tableview" destination="Qgv-vr-QyL" id="SBt-Xd-JBj"/>
                     </connections>
                 </viewController>
                 <customObject id="H25-N0-L4E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -10,29 +10,53 @@ import Cocoa
 
 class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSource {
     
-    @IBOutlet var tableView: NSScrollView!
+    @IBOutlet var tableview: NSTableView!
     
-    var article = Array<Any>()
-
+    
+    var feed : JSON?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id=p4324"
+        
+        guard let url = NSURL(string: dataSource) else{return }
+        guard let data = try? Data(contentsOf: url as URL) else {
+            DispatchQueue.main.async { [unowned self] in
+                
+            }
+            return
+        }
+        
+        let newFeed = JSON(data: data)
+        
+        DispatchQueue.main.async {
+            
+            self.feed = newFeed
+            self.tableview.reloadData()
+        }
+        
         
         // Do view setup here.
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 10//article.count
+        guard let feed = self.feed else {
+            return 0
+        }
+        return feed["articles"].count//article.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let vw = tableView.make(withIdentifier: "Cell", owner: self) as? Cell else { return nil }
-
         
-        vw.textView?.string = "在日本，这位「阿宅」政治家一直守护着二次元的创作自由"
+        vw.textView?.string = self.feed!["articles"][row]["title"].string as! String
+        
         
         return vw
-
-
+        
+        
     }
     
 }
