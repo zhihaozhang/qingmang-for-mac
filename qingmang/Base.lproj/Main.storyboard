@@ -715,6 +715,19 @@
                                     <customView canDrawConcurrently="YES" appearanceType="aqua" fixedFrame="YES" id="nAj-7q-zSz">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="730"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xr0-a6-7Na">
+                                                <rect key="frame" x="0.0" y="663" width="100" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="首页" bezelStyle="shadowlessSquare" imagePosition="right" alignment="center" imageScaling="proportionallyDown" inset="2" id="7Gw-9y-Nr6">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="20" name="TimesNewRomanPSMT"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="firstPage:" target="FAS-Su-04y" id="8N4-fY-wja"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </customView>
                                     <customView id="OM4-rL-XoT">
                                         <rect key="frame" x="101" y="0.0" width="359" height="730"/>

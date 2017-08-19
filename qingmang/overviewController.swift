@@ -12,8 +12,34 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     
     @IBOutlet var tableview: NSTableView!
     
+    @IBAction func firstPage(_ sender: Any) {
+        changeTheme("p2557")
+    }
     
     var feed : JSON?
+    
+    
+    func changeTheme(_ categroy_id:String){
+        
+         var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id="+categroy_id
+        guard let url = NSURL(string: dataSource) else{return }
+        guard let data = try? Data(contentsOf: url as URL) else {
+            DispatchQueue.main.async { [unowned self] in
+                
+            }
+            return
+        }
+        
+        let newFeed = JSON(data: data)
+        
+        DispatchQueue.main.async {
+            
+            self.feed = newFeed
+            self.tableview.reloadData()
+        }
+        
+    }
+    
     
     
     override func viewDidLoad() {
