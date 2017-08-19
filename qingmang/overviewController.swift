@@ -15,6 +15,39 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     @IBAction func firstPage(_ sender: Any) {
         changeTheme("p2557")
     }
+    @IBAction func people(_ sender: Any) {
+        changeTheme("p3023")
+    }
+    @IBAction func news(_ sender: Any) {
+         changeTheme("p3029")
+    }
+    @IBAction func atitude(_ sender: Any) {
+        changeTheme("p4318")
+    }
+    @IBAction func duanzi(_ sender: Any) {
+        changeTheme("p4320")
+    }
+    @IBAction func knowledge(_ sender: Any) {
+        changeTheme("p4322")
+    }
+    @IBAction func product(_ sender: Any) {
+        changeTheme("p4324")
+    }
+    @IBAction func productClicked(_ sender: Any) {
+        changeTheme("p4326")
+    }
+    @IBAction func travel(_ sender: Any) {
+        changeTheme("i4928")
+    }
+    @IBAction func google(_ sender: Any) {
+        changeTheme("i6280")
+    }
+ 
+    @IBAction func catClicked(_ sender: Any) {
+        changeTheme("p2451")
+    }
+    
+    
     
     var feed : JSON?
     
@@ -24,19 +57,14 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
          var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id="+categroy_id
         guard let url = NSURL(string: dataSource) else{return }
         guard let data = try? Data(contentsOf: url as URL) else {
-            DispatchQueue.main.async { [unowned self] in
-                
-            }
+            
             return
         }
         
         let newFeed = JSON(data: data)
-        
-        DispatchQueue.main.async {
-            
             self.feed = newFeed
             self.tableview.reloadData()
-        }
+        
         
     }
     
@@ -49,9 +77,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         guard let url = NSURL(string: dataSource) else{return }
         guard let data = try? Data(contentsOf: url as URL) else {
-            DispatchQueue.main.async { [unowned self] in
-                
-            }
+            
             return
         }
         

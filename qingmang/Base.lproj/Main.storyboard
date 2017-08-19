@@ -717,14 +717,124 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xr0-a6-7Na">
-                                                <rect key="frame" x="0.0" y="663" width="100" height="32"/>
+                                                <rect key="frame" x="0.0" y="663" width="100" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="首页" bezelStyle="shadowlessSquare" imagePosition="right" alignment="center" imageScaling="proportionallyDown" inset="2" id="7Gw-9y-Nr6">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" size="20" name="TimesNewRomanPSMT"/>
+                                                    <font key="font" size="25" name="STXinwei"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="firstPage:" target="FAS-Su-04y" id="8N4-fY-wja"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rla-OZ-5GD">
+                                                <rect key="frame" x="0.0" y="623" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="人物" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="30Z-YD-CsP">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="people:" target="FAS-Su-04y" id="Pcp-d9-Lnl"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-rM-QzH">
+                                                <rect key="frame" x="0.0" y="583" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="新闻" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="CyM-M4-wcs">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="news:" target="FAS-Su-04y" id="aUP-Is-VbY"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ld0-Ek-N4z">
+                                                <rect key="frame" x="0.0" y="543" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="态度" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="aoy-7x-RNP">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="atitude:" target="FAS-Su-04y" id="v6J-O9-jOz"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ip-g8-rw2">
+                                                <rect key="frame" x="0.0" y="503" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="段子" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="oCn-xO-LDF">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="duanzi:" target="FAS-Su-04y" id="Qzs-Bg-Np5"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-M6-V1K">
+                                                <rect key="frame" x="0.0" y="463" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="知识" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="bk1-ln-dOG">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="knowledge:" target="FAS-Su-04y" id="3S1-2l-JTU"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppt-4r-zUl">
+                                                <rect key="frame" x="0.0" y="423" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="产品" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="Dw6-gb-bm4">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="product:" target="FAS-Su-04y" id="mMt-sz-8JA"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWU-tk-dUu">
+                                                <rect key="frame" x="0.0" y="383" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="公司" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="cc9-8Z-3kC">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="productClicked:" target="FAS-Su-04y" id="W5L-da-iYl"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-hC-r6d">
+                                                <rect key="frame" x="0.0" y="343" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="旅行" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="YjB-cI-HdT">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="travel:" target="FAS-Su-04y" id="TCz-Sr-Vcb"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYs-iR-YdM">
+                                                <rect key="frame" x="0.0" y="303" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="谷歌" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="LYM-tB-wHw">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="google:" target="FAS-Su-04y" id="d1T-gu-FMb"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-Tp-pBT">
+                                                <rect key="frame" x="0.0" y="263" width="100" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="square" title="猫窝" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" inset="2" id="PdT-l2-xgj">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="23" name="STXinwei"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="catClicked:" target="FAS-Su-04y" id="CrJ-u8-p36"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -884,6 +994,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cat" destination="Zfp-Tp-pBT" id="o3K-pc-vNg"/>
                         <outlet property="tableview" destination="Qgv-vr-QyL" id="SBt-Xd-JBj"/>
                     </connections>
                 </viewController>
