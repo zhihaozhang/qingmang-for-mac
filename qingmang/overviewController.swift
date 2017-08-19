@@ -58,4 +58,55 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
     }
     
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        
+        guard  tableview.selectedRow != -1 else {
+            return
+        }
+        let row = tableview.selectedRow
+        
+        guard let splitVC = parent as? NSSplitViewController else {
+            return
+        }
+        
+        if let detail = splitVC.childViewControllers[1] as? detailViewController{
+            let webContent = getWebContentAccordingToArticleID(self.feed!["articles"][row]["articleId"].string as! String)
+            
+            detail.changeWebContent(webContent)
+        }
+        
+        
+        
+        
+    }
+    
+    
+    func getWebContentAccordingToArticleID(_ articleID:String) -> String{
+        var webContent = ""
+        
+        var dataSource = "https://api.qingmang.me/v2/article.get?token=92f136746dd34370a71363f6b66a3e01&id="+articleID
+        
+        guard let url = NSURL(string: dataSource) else{return webContent}
+        guard let data = try? Data(contentsOf: url as URL) else {
+            DispatchQueue.main.async { [unowned self] in
+                
+            }
+            return webContent
+        }
+        let article = JSON(data: data)
+//        DispatchQueue.main.async{
+            webContent = article["article"]["content"].string!
+            
+//        }
+        
+        return webContent
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
