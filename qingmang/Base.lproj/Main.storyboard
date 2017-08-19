@@ -1005,7 +1005,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-xh-Yb2">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="666"/>
+                                <rect key="frame" x="25" y="0.0" width="400" height="666"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -1013,10 +1013,10 @@
                             </wkWebView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="zKN-xh-Yb2" secondAttribute="bottom" id="4i3-dc-vdO"/>
-                            <constraint firstItem="zKN-xh-Yb2" firstAttribute="top" secondItem="u46-9c-nop" secondAttribute="top" id="F0a-ZX-u93"/>
-                            <constraint firstItem="zKN-xh-Yb2" firstAttribute="leading" secondItem="u46-9c-nop" secondAttribute="leading" id="Fyd-5C-cd1"/>
-                            <constraint firstAttribute="trailing" secondItem="zKN-xh-Yb2" secondAttribute="trailing" id="Oiq-hC-NDD"/>
+                            <constraint firstItem="zKN-xh-Yb2" firstAttribute="leading" secondItem="u46-9c-nop" secondAttribute="leading" constant="25" id="4dC-HO-rLs"/>
+                            <constraint firstItem="zKN-xh-Yb2" firstAttribute="top" secondItem="u46-9c-nop" secondAttribute="top" id="Vjt-ft-fTO"/>
+                            <constraint firstAttribute="trailing" secondItem="zKN-xh-Yb2" secondAttribute="trailing" constant="25" id="Vz2-lS-CqR"/>
+                            <constraint firstAttribute="bottom" secondItem="zKN-xh-Yb2" secondAttribute="bottom" id="yaq-Zn-442"/>
                         </constraints>
                     </view>
                     <connections>

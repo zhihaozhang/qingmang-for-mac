@@ -148,7 +148,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         if let detail = splitVC.childViewControllers[1] as? detailViewController{
             var webContent = getWebContentAccordingToArticleID(self.feed!["articles"][row]["articleId"].string as! String)
             
-            webContent = "<h2 style=\"text-align:center;font-family: STXinwei;\">"+self.feed!["articles"][row]["title"].string!+"</h2><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" />" + webContent
+            webContent = "<head><style>p{font-family: STKaiti} img{max-width:400px !important; height:auto;}</style></head><h2 style=\"text-align:center;font-family: STKaiti;\">"+self.feed!["articles"][row]["title"].string!+"</h2><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" />" + webContent
             
             detail.changeWebContent(webContent)
         }

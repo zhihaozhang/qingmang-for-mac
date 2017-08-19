@@ -24,6 +24,7 @@ class detailViewController: NSViewController {
         webview.loadHTMLString(html, baseURL: nil)
         
         
+        
     }
     
    
