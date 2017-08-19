@@ -994,7 +994,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cat" destination="Zfp-Tp-pBT" id="o3K-pc-vNg"/>
                         <outlet property="tableview" destination="Qgv-vr-QyL" id="SBt-Xd-JBj"/>
                     </connections>
                 </viewController>
