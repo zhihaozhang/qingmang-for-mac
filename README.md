@@ -9,4 +9,4 @@
 
 
 如果你喜欢这款软件，可以用支付宝/微信请我喝杯咖啡。
-![](http://syy.freep.cn/588778/WechatIMG95.jpeg)
+支付宝:zhihaozhang@me.com
