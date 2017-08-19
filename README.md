@@ -9,4 +9,6 @@
 
 
 如果你喜欢这款软件，可以用支付宝/微信请我喝杯咖啡。
-支付宝:zhihaozhang@me.com
+![](http://syy.freep.cn/588778/13255BDA-52C1-4601-91C5-8200453A1078.png)
+
+![](http://syy.freep.cn/588778/821A092A-A2D5-4F55-AA6C-DE6AD2E79152.png)
