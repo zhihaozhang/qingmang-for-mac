@@ -715,19 +715,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="666"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
-                                    <customView fixedFrame="YES" id="OM4-rL-XoT">
+                                    <customView id="OM4-rL-XoT">
                                         <rect key="frame" x="101" y="0.0" width="359" height="666"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-i4-qoC">
-                                                <rect key="frame" x="-1" y="-1" width="361" height="668"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <clipView key="contentView" ambiguous="YES" id="ImV-T9-kfy">
-                                                    <rect key="frame" x="1" y="1" width="359" height="666"/>
+                                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-i4-qoC">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="666"/>
+                                                <clipView key="contentView" id="ImV-T9-kfy">
+                                                    <rect key="frame" x="1" y="1" width="357" height="664"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="127" horizontalPageScroll="10" verticalLineScroll="127" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-2a-8xS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="666"/>
+                                                            <rect key="frame" x="0.0" y="-2" width="359" height="666"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="GGF-Mo-VLC">
                                                                 <rect key="frame" x="1" y="0.0" width="357" height="665"/>
@@ -835,15 +834,21 @@
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="7ZP-gd-cfT">
-                                                    <rect key="frame" x="1" y="651" width="359" height="16"/>
+                                                    <rect key="frame" x="1" y="649" width="357" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="QTn-WU-Mpa">
-                                                    <rect key="frame" x="344" y="1" width="16" height="666"/>
+                                                    <rect key="frame" x="342" y="1" width="16" height="664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9Sv-i4-qoC" secondAttribute="trailing" id="8Yr-Yl-k6o"/>
+                                            <constraint firstItem="9Sv-i4-qoC" firstAttribute="top" secondItem="OM4-rL-XoT" secondAttribute="top" id="G96-eT-uxO"/>
+                                            <constraint firstItem="9Sv-i4-qoC" firstAttribute="leading" secondItem="OM4-rL-XoT" secondAttribute="leading" id="ouF-33-Pl7"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Sv-i4-qoC" secondAttribute="bottom" id="qjz-so-osO"/>
+                                        </constraints>
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>

@@ -52,8 +52,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         guard let vw = tableView.make(withIdentifier: "Cell", owner: self) as? Cell else { return nil }
         
         vw.textView?.string = self.feed!["articles"][row]["title"].string as! String
-        
-        
+        vw.imageView?.image = NSImage(byReferencing: URL(string: self.feed!["articles"][row]["covers"][0]["url"].string as! String)!)
         return vw
         
         
