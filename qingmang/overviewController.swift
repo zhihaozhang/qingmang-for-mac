@@ -55,7 +55,10 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     func changeTheme(_ categroy_id:String){
         
         self.feed = nil
+        
         self.tableview.reloadData()
+        
+        
         guard let splitVC = parent as? NSSplitViewController else {
             return
         }
@@ -74,10 +77,12 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
             return
         }
         
+        self.tableview.reloadData()
+        
+        
         let newFeed = JSON(data: data)
             self.feed = newFeed
             self.tableview.reloadData()
-        
         
     }
     
@@ -110,13 +115,17 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         guard let feed = self.feed else {
             return 0
         }
+        guard self.feed != nil else{
+            return 0
+        }
         return feed["articles"].count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let vw = tableView.make(withIdentifier: "Cell", owner: self) as? Cell else { return nil }
         guard self.feed!["articles"][row]["title"].string != nil else {return nil}
-        vw.textView?.string = self.feed!["articles"][row]["title"].string as! String
+        vw.textView?.string = ""
+        vw.textView?.string = self.feed!["articles"][row]["title"].string! as! String
         
         guard self.feed!["articles"][row]["covers"][0]["url"].string != nil else {return nil}
         vw.imageView?.image = NSImage(byReferencing: URL(string: self.feed!["articles"][row]["covers"][0]["url"].string as! String)!)
@@ -139,7 +148,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         if let detail = splitVC.childViewControllers[1] as? detailViewController{
             var webContent = getWebContentAccordingToArticleID(self.feed!["articles"][row]["articleId"].string as! String)
             
-            webContent = "<h1 style=\"text-align:center\">"+self.feed!["articles"][row]["title"].string!+"</h1><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" />" + webContent
+            webContent = "<h2 style=\"text-align:center;font-family: STXinwei;\">"+self.feed!["articles"][row]["title"].string!+"</h2><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" />" + webContent
             
             detail.changeWebContent(webContent)
         }
