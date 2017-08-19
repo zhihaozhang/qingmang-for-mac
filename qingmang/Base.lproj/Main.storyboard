@@ -726,9 +726,9 @@
                                                     <rect key="frame" x="1" y="1" width="357" height="728"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="127" horizontalPageScroll="10" verticalLineScroll="127" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-2a-8xS">
+                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="127" horizontalPageScroll="10" verticalLineScroll="127" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-2a-8xS">
                                                             <rect key="frame" x="0.0" y="0.0" width="357" height="728"/>
-                                                            <clipView key="contentView" id="GGF-Mo-VLC">
+                                                            <clipView key="contentView" copiesOnScroll="NO" id="GGF-Mo-VLC">
                                                                 <rect key="frame" x="1" y="0.0" width="355" height="727"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
@@ -818,11 +818,11 @@
                                                                 </subviews>
                                                             </clipView>
                                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="w05-GZ-64Q">
-                                                                <rect key="frame" x="1" y="711" width="355" height="16"/>
+                                                                <rect key="frame" x="-100" y="-100" width="355" height="16"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ETW-Xa-TLQ">
-                                                                <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="102"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <tableHeaderView key="headerView" autoresizesSubviews="NO" focusRingType="none" id="QNc-kj-liE">

@@ -19,7 +19,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id=p4324"
+        var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id=p2557"
         
         guard let url = NSURL(string: dataSource) else{return }
         guard let data = try? Data(contentsOf: url as URL) else {
@@ -70,14 +70,12 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         }
         
         if let detail = splitVC.childViewControllers[1] as? detailViewController{
-            let webContent = getWebContentAccordingToArticleID(self.feed!["articles"][row]["articleId"].string as! String)
+            var webContent = getWebContentAccordingToArticleID(self.feed!["articles"][row]["articleId"].string as! String)
+            
+            webContent = "<h1 style=\"text-align:center\">"+self.feed!["articles"][row]["title"].string!+"</h1><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" />" + webContent
             
             detail.changeWebContent(webContent)
         }
-        
-        
-        
-        
     }
     
     
@@ -94,10 +92,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
             return webContent
         }
         let article = JSON(data: data)
-//        DispatchQueue.main.async{
             webContent = article["article"]["content"].string!
-            
-//        }
         
         return webContent
     }
