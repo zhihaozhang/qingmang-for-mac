@@ -5,7 +5,7 @@
 现在轻芒处在内测阶段，开放的文章种类有限，后期会增加。
 
 系统界面：
-![](http://syy.freep.cn/588778/1B8D71B1-AFF2-40E9-AE6D-CCF8473AD077.png)
+![](http://syy.freep.cn/588778/FF2E61F5-7785-4BB2-B1E6-EEC90653F41C.png)
 
 
 
