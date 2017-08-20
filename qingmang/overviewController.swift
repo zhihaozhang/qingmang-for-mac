@@ -25,7 +25,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         changeHighlight(sender)
     }
     @IBAction func news(_ sender: Any) {
-         changeTheme("p3029")
+        changeTheme("p3029")
         changeHighlight(sender)
     }
     @IBAction func atitude(_ sender: Any) {
@@ -56,7 +56,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         changeTheme("i6280")
         changeHighlight(sender)
     }
- 
+    
     @IBAction func catClicked(_ sender: Any) {
         changeTheme("p2451")
         changeHighlight(sender)
@@ -74,44 +74,36 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     @IBOutlet var categoryView: NSView!
     
     
-    var feed : JSON?
+    var feed : JSON? {
+        didSet {
+            tableview.reloadData()
+        }
+    }
     
     
     func changeTheme(_ categroy_id:String){
         
         self.feed = nil
         
-        self.tableview.reloadData()
-        
-        
         guard let splitVC = parent as? NSSplitViewController else {
             return
         }
         
         if let detail = splitVC.childViewControllers[1] as? detailViewController{
-            var webContent = ""
+            let webContent = ""
             
             detail.changeWebContent(webContent)
         }
-
-        
-         var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id="+categroy_id
-        guard let url = NSURL(string: dataSource) else{return }
-        guard let data = try? Data(contentsOf: url as URL) else {
-            
-            return
-        }
-        
-        self.tableview.reloadData()
         
         
-        let newFeed = JSON(data: data)
-            self.feed = newFeed
-            self.tableview.reloadData()
+        let dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id="+categroy_id
         
+        getData(with: dataSource, success: { (data: Data?) in
+            if let data = data {
+                self.feed = JSON(data: data)
+            }
+        })
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,26 +114,17 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         categoryView.wantsLayer = true
         categoryView.layer?.backgroundColor = NSColor(red: 112/255, green: 128/255, blue: 144/255, alpha: 0.1).cgColor
         
-        var dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id=p2557"
+        let dataSource = "https://api.qingmang.me/v2/article.list?token=92f136746dd34370a71363f6b66a3e01&category_id=p2557"
         
-        guard let url = NSURL(string: dataSource) else{return }
-        guard let data = try? Data(contentsOf: url as URL) else {
-            
-            return
-        }
-        
-        let newFeed = JSON(data: data)
-        
-        DispatchQueue.main.async {
-            
-            self.feed = newFeed
-            self.tableview.reloadData()
-        }
-        
+        getData(with: dataSource, success: { (data: Data?) in
+            if let data = data {
+                self.feed = JSON(data: data)
+            }
+        })
         
         // Do view setup here.
     }
-   
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         guard let feed = self.feed else {
             return 0
@@ -200,12 +183,21 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         return webContent
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
+func getData(with urlString: String,success: @escaping (Data?)->Void, failure: ((Error)->Void)? = nil) {
+    guard let url = URL(string: urlString) else {
+        return
+    }
+    let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+        DispatchQueue.main.async {
+            if let error = error {
+                failure?(error)
+            } else {
+                success(data)
+            }
+        }
+    }
+    task.resume()
+}
+
