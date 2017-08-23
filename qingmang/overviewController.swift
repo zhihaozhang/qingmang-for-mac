@@ -10,6 +10,8 @@ import Cocoa
 
 class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSource {
     
+    
+    
     @IBOutlet var firstPageButton: NSButton!
     
     var highlightNow: NSButton? = nil
@@ -183,7 +185,13 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         return webContent
     }
+    
+   
+    
+    
 }
+
+
 
 func getData(with urlString: String,success: @escaping (Data?)->Void, failure: ((Error)->Void)? = nil) {
     guard let url = URL(string: urlString) else {
