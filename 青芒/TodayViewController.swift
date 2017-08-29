@@ -59,13 +59,9 @@ class TodayViewController: NSViewController, NCWidgetProviding,NSTableViewDelega
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let vw = tableView.make(withIdentifier: "CELL1", owner: self) as? NSTableCellView else { return nil }
         guard self.feed!["articles"][row]["title"].string != nil else {return nil}
-        vw.textField?.stringValue = "test"
         vw.textField?.stringValue = self.feed!["articles"][row]["title"].string! as! String
-        
-        
+    
         return vw
-        
-        
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
