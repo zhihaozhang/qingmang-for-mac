@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>轻芒.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>青芒.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CE15C5E71F46CF8300F7891F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE6CC95A1F556CBD008CBCCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

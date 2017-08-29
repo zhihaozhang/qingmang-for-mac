@@ -18,7 +18,37 @@
 		CE15C60B1F471F9900F7891F /* myScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15C60A1F471F9900F7891F /* myScrollView.swift */; };
 		CE15C6111F472C7900F7891F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15C6101F472C7900F7891F /* SwiftyJSON.swift */; };
 		CE6CC9561F556232008CBCCF /* myNSSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC9551F556232008CBCCF /* myNSSplitView.swift */; };
+		CE6CC95E1F556CBD008CBCCF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CC95D1F556CBD008CBCCF /* NotificationCenter.framework */; };
+		CE6CC9631F556CBD008CBCCF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC9621F556CBD008CBCCF /* TodayViewController.swift */; };
+		CE6CC9661F556CBD008CBCCF /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC9641F556CBD008CBCCF /* TodayViewController.xib */; };
+		CE6CC96A1F556CBD008CBCCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC9681F556CBD008CBCCF /* InfoPlist.strings */; };
+		CE6CC96D1F556CBD008CBCCF /* 青芒.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE6CC95B1F556CBD008CBCCF /* 青芒.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE6CC9731F556F2D008CBCCF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC9721F556F2D008CBCCF /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE6CC96B1F556CBD008CBCCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE15C5E01F46CF8300F7891F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6CC95A1F556CBD008CBCCF;
+			remoteInfo = "青芒";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE6CC9711F556CBD008CBCCF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE6CC96D1F556CBD008CBCCF /* 青芒.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE15C5E81F46CF8300F7891F /* qingmang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qingmang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +64,14 @@
 		CE15C60A1F471F9900F7891F /* myScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myScrollView.swift; sourceTree = "<group>"; };
 		CE15C6101F472C7900F7891F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CE6CC9551F556232008CBCCF /* myNSSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myNSSplitView.swift; sourceTree = "<group>"; };
+		CE6CC95B1F556CBD008CBCCF /* 青芒.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "青芒.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6CC95D1F556CBD008CBCCF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		CE6CC9611F556CBD008CBCCF /* __.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = __.entitlements; sourceTree = "<group>"; };
+		CE6CC9621F556CBD008CBCCF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		CE6CC9651F556CBD008CBCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		CE6CC9671F556CBD008CBCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6CC9691F556CBD008CBCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE6CC9721F556F2D008CBCCF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +82,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE6CC9581F556CBD008CBCCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CC95E1F556CBD008CBCCF /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				CE15C5EA1F46CF8300F7891F /* qingmang */,
+				CE6CC95F1F556CBD008CBCCF /* 青芒 */,
+				CE6CC95C1F556CBD008CBCCF /* Frameworks */,
 				CE15C5E91F46CF8300F7891F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				CE15C5E81F46CF8300F7891F /* qingmang.app */,
+				CE6CC95B1F556CBD008CBCCF /* 青芒.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +131,35 @@
 			path = qingmang;
 			sourceTree = "<group>";
 		};
+		CE6CC95C1F556CBD008CBCCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CC95D1F556CBD008CBCCF /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE6CC95F1F556CBD008CBCCF /* 青芒 */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CC9721F556F2D008CBCCF /* SwiftyJSON.swift */,
+				CE6CC9621F556CBD008CBCCF /* TodayViewController.swift */,
+				CE6CC9641F556CBD008CBCCF /* TodayViewController.xib */,
+				CE6CC9671F556CBD008CBCCF /* Info.plist */,
+				CE6CC9681F556CBD008CBCCF /* InfoPlist.strings */,
+				CE6CC9601F556CBD008CBCCF /* Supporting Files */,
+			);
+			path = "青芒";
+			sourceTree = "<group>";
+		};
+		CE6CC9601F556CBD008CBCCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CC9611F556CBD008CBCCF /* __.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,15 +170,34 @@
 				CE15C5E41F46CF8300F7891F /* Sources */,
 				CE15C5E51F46CF8300F7891F /* Frameworks */,
 				CE15C5E61F46CF8300F7891F /* Resources */,
+				CE6CC9711F556CBD008CBCCF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE6CC96C1F556CBD008CBCCF /* PBXTargetDependency */,
 			);
 			name = qingmang;
 			productName = qingmang;
 			productReference = CE15C5E81F46CF8300F7891F /* qingmang.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE6CC95A1F556CBD008CBCCF /* 青芒 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6CC96E1F556CBD008CBCCF /* Build configuration list for PBXNativeTarget "青芒" */;
+			buildPhases = (
+				CE6CC9571F556CBD008CBCCF /* Sources */,
+				CE6CC9581F556CBD008CBCCF /* Frameworks */,
+				CE6CC9591F556CBD008CBCCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "青芒";
+			productName = "青芒";
+			productReference = CE6CC95B1F556CBD008CBCCF /* 青芒.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -113,6 +210,11 @@
 				ORGANIZATIONNAME = "Chih-Hao";
 				TargetAttributes = {
 					CE15C5E71F46CF8300F7891F = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2JY6F4ZP47;
+						ProvisioningStyle = Automatic;
+					};
+					CE6CC95A1F556CBD008CBCCF = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 2JY6F4ZP47;
 						ProvisioningStyle = Automatic;
@@ -133,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				CE15C5E71F46CF8300F7891F /* qingmang */,
+				CE6CC95A1F556CBD008CBCCF /* 青芒 */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +247,15 @@
 			files = (
 				CE15C5F01F46CF8300F7891F /* Assets.xcassets in Resources */,
 				CE15C5F31F46CF8400F7891F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CC9591F556CBD008CBCCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CC9661F556CBD008CBCCF /* TodayViewController.xib in Resources */,
+				CE6CC96A1F556CBD008CBCCF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +278,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE6CC9571F556CBD008CBCCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CC9631F556CBD008CBCCF /* TodayViewController.swift in Sources */,
+				CE6CC9731F556F2D008CBCCF /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE6CC96C1F556CBD008CBCCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6CC95A1F556CBD008CBCCF /* 青芒 */;
+			targetProxy = CE6CC96B1F556CBD008CBCCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE15C5F11F46CF8400F7891F /* Main.storyboard */ = {
@@ -175,6 +304,22 @@
 				CE15C5F21F46CF8400F7891F /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE6CC9641F556CBD008CBCCF /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE6CC9651F556CBD008CBCCF /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		CE6CC9681F556CBD008CBCCF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE6CC9691F556CBD008CBCCF /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -275,6 +420,7 @@
 		CE15C5F81F46CF8400F7891F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2JY6F4ZP47;
@@ -289,6 +435,7 @@
 		CE15C5F91F46CF8400F7891F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2JY6F4ZP47;
@@ -296,6 +443,36 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhihao.fudan.qingmang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CE6CC96F1F556CBD008CBCCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "青芒/__.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2JY6F4ZP47;
+				INFOPLIST_FILE = "青芒/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhihao.fudan.qingmang.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CE6CC9701F556CBD008CBCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "青芒/__.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2JY6F4ZP47;
+				INFOPLIST_FILE = "青芒/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhihao.fudan.qingmang.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -317,6 +494,15 @@
 			buildConfigurations = (
 				CE15C5F81F46CF8400F7891F /* Debug */,
 				CE15C5F91F46CF8400F7891F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE6CC96E1F556CBD008CBCCF /* Build configuration list for PBXNativeTarget "青芒" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6CC96F1F556CBD008CBCCF /* Debug */,
+				CE6CC9701F556CBD008CBCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
