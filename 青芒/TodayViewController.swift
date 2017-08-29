@@ -68,6 +68,18 @@ class TodayViewController: NSViewController, NCWidgetProviding,NSTableViewDelega
         
     }
     
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        print(tableView.selectedRow)
+        guard  tableView.selectedRow != -1 else {
+            return
+        }
+        let row = tableView.selectedRow
+        
+        NSWorkspace.shared().open(URL(string: self.feed!["articles"][row]["webUrl"].string!)!)
+        
+       
+    }
+    
     func getData(with urlString: String,success: @escaping (Data?)->Void, failure: ((Error)->Void)? = nil) {
         guard let url = URL(string: urlString) else {
             return
