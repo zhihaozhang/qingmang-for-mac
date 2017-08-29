@@ -123,7 +123,6 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
                 self.feed = JSON(data: data)
             }
         })
-        
         // Do view setup here.
     }
     
@@ -145,6 +144,8 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         guard self.feed!["articles"][row]["covers"][0]["url"].string != nil else {return nil}
         vw.imageView?.image = NSImage(byReferencing: URL(string: self.feed!["articles"][row]["covers"][0]["url"].string as! String)!)
+        
+             
         return vw
         
         
@@ -185,10 +186,7 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         return webContent
     }
-    
-   
-    
-    
+
 }
 
 
