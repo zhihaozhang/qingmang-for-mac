@@ -688,7 +688,7 @@
                         <splitViewItem holdingPriority="255" behavior="contentList" id="E6C-ks-JUW"/>
                         <splitViewItem id="gcR-S3-CZ9"/>
                     </splitViewItems>
-                    <splitView key="splitView" misplaced="YES" dividerStyle="thin" vertical="YES" id="N0Y-5I-rWc">
+                    <splitView key="splitView" misplaced="YES" dividerStyle="thin" vertical="YES" id="N0Y-5I-rWc" customClass="myNSSplitView" customModule="qingmang" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="666"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>

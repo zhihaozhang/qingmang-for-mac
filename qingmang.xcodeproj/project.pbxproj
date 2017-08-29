@@ -17,6 +17,7 @@
 		CE15C6051F46EE3400F7891F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15C6041F46EE3400F7891F /* Cell.swift */; };
 		CE15C60B1F471F9900F7891F /* myScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15C60A1F471F9900F7891F /* myScrollView.swift */; };
 		CE15C6111F472C7900F7891F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15C6101F472C7900F7891F /* SwiftyJSON.swift */; };
+		CE6CC9561F556232008CBCCF /* myNSSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC9551F556232008CBCCF /* myNSSplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE15C6041F46EE3400F7891F /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		CE15C60A1F471F9900F7891F /* myScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myScrollView.swift; sourceTree = "<group>"; };
 		CE15C6101F472C7900F7891F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CE6CC9551F556232008CBCCF /* myNSSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myNSSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				CE15C5FE1F46D92400F7891F /* overviewController.swift */,
 				CE15C6001F46D93B00F7891F /* detailViewController.swift */,
 				CE15C60A1F471F9900F7891F /* myScrollView.swift */,
+				CE6CC9551F556232008CBCCF /* myNSSplitView.swift */,
 			);
 			path = qingmang;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				CE15C5FF1F46D92400F7891F /* overviewController.swift in Sources */,
 				CE15C6111F472C7900F7891F /* SwiftyJSON.swift in Sources */,
 				CE15C6011F46D93B00F7891F /* detailViewController.swift in Sources */,
+				CE6CC9561F556232008CBCCF /* myNSSplitView.swift in Sources */,
 				CE15C60B1F471F9900F7891F /* myScrollView.swift in Sources */,
 				CE15C5FD1F46D7AE00F7891F /* mainViewController.swift in Sources */,
 				CE15C6051F46EE3400F7891F /* Cell.swift in Sources */,
