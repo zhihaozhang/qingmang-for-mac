@@ -186,9 +186,28 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         return webContent
     }
+    
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        return MyNSTableRowView()
+    }
 
 }
 
+
+
+class MyNSTableRowView: NSTableRowView {
+    
+    override func drawSelection(in dirtyRect: NSRect) {
+        if self.selectionHighlightStyle != .none {
+            let selectionRect = NSInsetRect(self.bounds, 2.5, 2.5)
+            NSColor(calibratedWhite: 0.65, alpha: 1).setStroke()
+            NSColor(calibratedWhite: 0.82, alpha: 1).setFill()
+            let selectionPath = NSBezierPath.init(roundedRect: selectionRect, xRadius: 0, yRadius: 0)
+            selectionPath.fill()
+            selectionPath.stroke()
+        }
+    }
+}
 
 
 func getData(with urlString: String,success: @escaping (Data?)->Void, failure: ((Error)->Void)? = nil) {

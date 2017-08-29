@@ -22,15 +22,15 @@ class Cell: NSTableCellView,NSTextViewDelegate {
         // Drawing code here.
     }
     
-    override var backgroundStyle:NSBackgroundStyle{
-        didSet{
-            if backgroundStyle == .dark{
-                self.layer?.backgroundColor = NSColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
-            }else{
-                self.layer?.backgroundColor = NSColor.white.cgColor
-            }
-            
-        }
-    }
+//    override var backgroundStyle:NSBackgroundStyle{
+//        didSet{
+//            if backgroundStyle == .dark{
+//                self.layer?.backgroundColor = NSColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+//            }else{
+//                self.layer?.backgroundColor = NSColor.white.cgColor
+//            }
+//            
+//        }
+//    }
 
 }
