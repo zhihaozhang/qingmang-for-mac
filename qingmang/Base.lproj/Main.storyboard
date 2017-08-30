@@ -671,7 +671,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="1000" height="666"/>
                     </window>
                     <touchBar key="touchBar" id="ZHh-2s-w8g">
@@ -844,6 +844,16 @@
                         </touchBarItems>
                     </touchBar>
                     <connections>
+                        <outlet property="button10" destination="U8R-q8-NOo" id="euG-Hk-Zin"/>
+                        <outlet property="button11" destination="ndP-bw-bc0" id="k3Y-o5-xeg"/>
+                        <outlet property="button2" destination="IYL-Q9-EJU" id="GMm-cF-sHQ"/>
+                        <outlet property="button3" destination="aIk-z2-yRC" id="pyb-oh-2Zy"/>
+                        <outlet property="button4" destination="5QE-s9-dsY" id="eyg-eX-mZ5"/>
+                        <outlet property="button5" destination="3av-oq-KCa" id="rEN-DW-AYe"/>
+                        <outlet property="button6" destination="zLf-rf-Hos" id="RC8-d0-fs3"/>
+                        <outlet property="button7" destination="1Ah-df-rng" id="Bux-R2-OWm"/>
+                        <outlet property="button8" destination="VEW-3Q-6ap" id="Ymq-6d-rfp"/>
+                        <outlet property="button9" destination="Lgg-iz-VlZ" id="HT0-Aw-hmi"/>
                         <outlet property="firstPage" destination="SPS-Xt-Ak5" id="emP-Ui-AbK"/>
                         <outlet property="firstPageButton" destination="vrw-Vc-JKU" id="JnA-Xc-pSj"/>
                         <segue destination="AXv-qI-x0q" kind="relationship" relationship="window.shadowedContentViewController" id="WRK-oA-gzZ"/>

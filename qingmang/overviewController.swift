@@ -10,6 +10,7 @@ import Cocoa
 
 class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSource {
     
+    var mywindowController : windowController? = nil
     
     
     @IBOutlet var firstPageButton: NSButton!
@@ -31,47 +32,59 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     @IBAction func firstPage(_ sender: Any) {
         changeTheme("p2557")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.firstPageButton)
     }
     @IBAction func people(_ sender: Any) {
         changeTheme("p3023")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button2)
     }
     @IBAction func news(_ sender: Any) {
         changeTheme("p3029")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button3)
     }
     @IBAction func atitude(_ sender: Any) {
         changeTheme("p4318")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button4)
+        
     }
     @IBAction func duanzi(_ sender: Any) {
         changeTheme("p4320")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button5)
     }
     @IBAction func knowledge(_ sender: Any) {
         changeTheme("p4322")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button6)
     }
     @IBAction func product(_ sender: Any) {
         changeTheme("p4324")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button7)
     }
     @IBAction func productClicked(_ sender: Any) {
         changeTheme("p4326")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button8)
     }
     @IBAction func travel(_ sender: Any) {
         changeTheme("i4928")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button9)
     }
     @IBAction func google(_ sender: Any) {
         changeTheme("i6280")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button10)
     }
     
     @IBAction func catClicked(_ sender: Any) {
         changeTheme("p2451")
         changeHighlight(sender)
+        self.mywindowController?.changeHighlight(self.mywindowController?.button11)
     }
     
     func changeHighlight(_ sender:Any){
@@ -119,6 +132,9 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.mywindowController = NSApplication.shared().windows[0].windowController as? windowController
+        print(self.mywindowController)
         
         
         highlightNow = firstPageButton

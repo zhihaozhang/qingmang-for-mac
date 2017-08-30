@@ -14,6 +14,25 @@ class windowController: NSWindowController {
     
     @IBOutlet var firstPageButton: NSButton!
    
+    @IBOutlet internal var button2: NSButton!
+    
+    @IBOutlet internal var button3: NSButton!
+    
+    @IBOutlet internal var button4: NSButton!
+    
+    @IBOutlet internal var button5: NSButton!
+    
+    @IBOutlet internal var button6: NSButton!
+    
+    @IBOutlet internal var button7: NSButton!
+    
+    @IBOutlet internal var button8: NSButton!
+    
+    @IBOutlet internal var button9: NSButton!
+    
+    @IBOutlet internal var button10: NSButton!
+    
+    @IBOutlet internal var button11: NSButton!
     
     override func windowDidLoad() {
         super.windowDidLoad()
