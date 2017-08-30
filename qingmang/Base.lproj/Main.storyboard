@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <plugIn identifier="com.apple.WebKit2IBPlugin" version="12118"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -669,10 +671,181 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
                         <value key="minSize" type="size" width="1000" height="666"/>
                     </window>
+                    <touchBar key="touchBar" id="ZHh-2s-w8g">
+                        <touchBarItems>
+                            <touchBarItem id="QLp-3E-JrM">
+                                <viewController key="viewController" id="pEA-MR-XsN">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-Xt-Ak5">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="首页" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="vrw-Vc-JKU">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button1clicked:" target="B8D-0N-5wS" id="UtD-gX-5e3"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="zhn-rr-p3V">
+                                <viewController key="viewController" id="Ck0-o3-OIw">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYL-Q9-EJU">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="人物" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="ESX-6e-GhA">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="getPeople:" target="B8D-0N-5wS" id="FAV-rv-RF4"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="yxJ-hh-QHD">
+                                <viewController key="viewController" id="tKA-go-2qR">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIk-z2-yRC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="新闻" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="zY5-9e-tBC">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button3clicked:" target="B8D-0N-5wS" id="ZUe-ho-mT5"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="zDD-hu-KSP">
+                                <viewController key="viewController" id="C8y-lX-4Jl">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QE-s9-dsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="态度" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="jfM-qd-0ou">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button4clicked:" target="B8D-0N-5wS" id="0dy-yK-p34"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="qSx-5s-wPw">
+                                <viewController key="viewController" id="CO1-qy-e5c">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3av-oq-KCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="段子" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="eDZ-rM-p7J">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button5clicked:" target="B8D-0N-5wS" id="wRd-HE-VTB"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="whj-sB-evZ">
+                                <viewController key="viewController" id="rvi-Vc-JCv">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLf-rf-Hos">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="知识" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Kj3-HT-I30">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button6clicked:" target="B8D-0N-5wS" id="0As-a7-ZCi"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="NzR-Gf-z3a">
+                                <viewController key="viewController" id="YBQ-G3-fPh">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ah-df-rng">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="产品" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2T2-CX-D46">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button7clicked:" target="B8D-0N-5wS" id="RMu-HV-aaA"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="87I-5G-X0i">
+                                <viewController key="viewController" id="fXt-nM-ZLA">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-3Q-6ap">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="公司" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="CkA-2r-7mv">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button8clicked:" target="B8D-0N-5wS" id="OV9-Ec-m6e"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="i0I-Wv-Udj">
+                                <viewController key="viewController" id="b4C-aO-Pve">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-iz-VlZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="旅行" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="RkJ-7f-619">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button9clicked:" target="B8D-0N-5wS" id="b8s-XY-mas"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="qVK-nu-zv9">
+                                <viewController key="viewController" id="9Xm-rD-qDt">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8R-q8-NOo">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="谷歌" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="R8L-3a-SL8">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button10clicked:" target="B8D-0N-5wS" id="jWl-JJ-Tbb"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="Kys-CU-g16">
+                                <viewController key="viewController" id="OtS-gw-6uu">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-bw-bc0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <buttonCell key="cell" type="push" title="猫窝" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Ddd-JH-xQX">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="button11clicked:" target="B8D-0N-5wS" id="w46-QW-G2r"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="50" height="30"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
+                        <outlet property="firstPage" destination="SPS-Xt-Ak5" id="emP-Ui-AbK"/>
+                        <outlet property="firstPageButton" destination="vrw-Vc-JKU" id="JnA-Xc-pSj"/>
                         <segue destination="AXv-qI-x0q" kind="relationship" relationship="window.shadowedContentViewController" id="WRK-oA-gzZ"/>
                     </connections>
                 </windowController>
@@ -721,7 +894,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="首页" bezelStyle="shadowlessSquare" imagePosition="right" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="7Gw-9y-Nr6">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="25" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="firstPage:" target="FAS-Su-04y" id="8N4-fY-wja"/>
@@ -732,7 +905,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="人物" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="30Z-YD-CsP">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="people:" target="FAS-Su-04y" id="Pcp-d9-Lnl"/>
@@ -743,7 +916,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="新闻" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="CyM-M4-wcs">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="news:" target="FAS-Su-04y" id="aUP-Is-VbY"/>
@@ -754,7 +927,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="态度" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="aoy-7x-RNP">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="atitude:" target="FAS-Su-04y" id="v6J-O9-jOz"/>
@@ -765,7 +938,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="段子" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="oCn-xO-LDF">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="duanzi:" target="FAS-Su-04y" id="Qzs-Bg-Np5"/>
@@ -776,7 +949,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="知识" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="bk1-ln-dOG">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="knowledge:" target="FAS-Su-04y" id="3S1-2l-JTU"/>
@@ -787,7 +960,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="产品" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="Dw6-gb-bm4">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="product:" target="FAS-Su-04y" id="mMt-sz-8JA"/>
@@ -798,7 +971,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="公司" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="cc9-8Z-3kC">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="productClicked:" target="FAS-Su-04y" id="W5L-da-iYl"/>
@@ -809,7 +982,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="旅行" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="YjB-cI-HdT">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="travel:" target="FAS-Su-04y" id="TCz-Sr-Vcb"/>
@@ -820,7 +993,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="谷歌" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="LYM-tB-wHw">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="google:" target="FAS-Su-04y" id="d1T-gu-FMb"/>
@@ -831,7 +1004,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="square" title="猫窝" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" inset="2" id="PdT-l2-xgj">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" size="23" name="STXinwei"/>
+                                                    <font key="font" size="23" name="STKaiti"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="catClicked:" target="FAS-Su-04y" id="CrJ-u8-p36"/>
@@ -1116,6 +1289,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button10" destination="rYs-iR-YdM" id="TL1-Vi-nrZ"/>
+                        <outlet property="button11" destination="Zfp-Tp-pBT" id="nv6-fv-YMT"/>
+                        <outlet property="button2" destination="rla-OZ-5GD" id="6Aw-Tt-dfD"/>
+                        <outlet property="button3" destination="eCW-rM-QzH" id="x4B-jN-fBY"/>
+                        <outlet property="button4" destination="ld0-Ek-N4z" id="fuc-dV-0HC"/>
+                        <outlet property="button5" destination="3ip-g8-rw2" id="oZb-8W-MED"/>
+                        <outlet property="button6" destination="WG9-M6-V1K" id="22P-jh-YHl"/>
+                        <outlet property="button7" destination="ppt-4r-zUl" id="IAa-bU-HhP"/>
+                        <outlet property="button8" destination="GWU-tk-dUu" id="cPV-5G-78p"/>
+                        <outlet property="button9" destination="vxk-hC-r6d" id="e6j-Kf-6h7"/>
                         <outlet property="categoryView" destination="nAj-7q-zSz" id="473-Os-4eL"/>
                         <outlet property="firstPageButton" destination="Xr0-a6-7Na" id="Cz3-g1-vYb"/>
                         <outlet property="tableview" destination="Qgv-vr-QyL" id="SBt-Xd-JBj"/>

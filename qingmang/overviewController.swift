@@ -13,6 +13,16 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
     
     
     @IBOutlet var firstPageButton: NSButton!
+    @IBOutlet var button2: NSButton!
+    @IBOutlet var button3: NSButton!
+    @IBOutlet var button4: NSButton!
+    @IBOutlet var button5: NSButton!
+    @IBOutlet var button6: NSButton!
+    @IBOutlet var button7: NSButton!
+    @IBOutlet var button8: NSButton!
+    @IBOutlet var button9: NSButton!
+    @IBOutlet var button10: NSButton!
+    @IBOutlet var button11: NSButton!
     
     var highlightNow: NSButton? = nil
     
