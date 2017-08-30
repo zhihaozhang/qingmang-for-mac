@@ -46,52 +46,52 @@ class windowController: NSWindowController {
     
     @IBAction func button1clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.firstPageButton)
+        self.overviewController?.firstPage(self.overviewController?.firstPageButton)
     }
     
     @IBAction func button3clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button3)
+        self.overviewController?.news(self.overviewController?.button3)
     }
     
     @IBAction func button4clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button4)
+        self.overviewController?.atitude(self.overviewController?.button4)
     }
     
     @IBAction func button5clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button5)
+        self.overviewController?.duanzi(self.overviewController?.button5)
     }
     
     @IBAction func button6clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button6)
+        self.overviewController?.knowledge(self.overviewController?.button6)
     }
     
     @IBAction func button7clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button7)
+        self.overviewController?.product(self.overviewController?.button7)
     }
     
     @IBAction func button8clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button8)
+        self.overviewController?.productClicked(self.overviewController?.button8)
     }
     
     @IBAction func button9clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button9)
+        self.overviewController?.travel(self.overviewController?.button9)
     }
     
     @IBAction func button10clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button10)
+        self.overviewController?.google(self.overviewController?.button10)
     }
     
     @IBAction func button11clicked(_ sender: Any) {
         changeHighlight(sender)
-        self.overviewController?.people(self.overviewController?.button11)
+        self.overviewController?.catClicked(self.overviewController?.button11)
     }
     
     func changeHighlight(_ sender:Any){
