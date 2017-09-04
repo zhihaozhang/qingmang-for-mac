@@ -8,10 +8,3 @@
 
 系统界面：
 ![](http://syy.freep.cn/588778/FF2E61F5-7785-4BB2-B1E6-EEC90653F41C.png)
-
-
-
-如果您喜欢这款软件，或者代码、项目给您带来了启发，可以用支付宝/微信请我喝杯咖啡。
-
-![](http://syy.freep.cn/588778/821A092A-A2D5-4F55-AA6C-DE6AD2E79152.png)
-支付宝：zhihaozhang@me.com
