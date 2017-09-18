@@ -193,15 +193,39 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
             
             webContent = "<head><style>p{font-family: STKaiti} img{max-width:400px !important; height:auto;} body,html{overflow-x:hidden;} p{font-size:20px}</style></head><h2 style=\"text-align:center;font-family: STKaiti;\">"+self.feed!["articles"][row]["title"].string!+"</h2><hr style=\"height:8px;border:none;border-top:4px solid #EDEDED;\" /><body> \(webContent)</body>"
             
+            detail.url = NSURL(string:getArticleURL((self.feed!["articles"][row]["articleId"].string as? String)!))
+            
             detail.changeWebContent(webContent)
         }
     }
     
     
+    
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        return MyNSTableRowView()
+    }
+    
+    func getArticleURL(_ articleID:String) -> String{
+        var articleURL = ""
+        
+        var dataSource = "https://api.qingmang.me/v2/article.get?token=92f136746dd34370a71363f6b66a3e01&id="+articleID
+        
+        
+        guard let url = NSURL(string: dataSource) else{return articleURL}
+        guard let data = try? Data(contentsOf: url as URL) else {
+            return articleURL
+        }
+        let article = JSON(data: data)
+        articleURL = article["article"]["webUrl"].string!
+        
+        return articleURL
+    }
+    
     func getWebContentAccordingToArticleID(_ articleID:String) -> String{
         var webContent = ""
         
         var dataSource = "https://api.qingmang.me/v2/article.get?token=92f136746dd34370a71363f6b66a3e01&id="+articleID
+        
         
         guard let url = NSURL(string: dataSource) else{return webContent}
         guard let data = try? Data(contentsOf: url as URL) else {
@@ -212,14 +236,13 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         
         return webContent
     }
-    
-    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
-        return MyNSTableRowView()
-    }
+  
 
 }
 
-
+func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+    return MyNSTableRowView()
+}
 
 class MyNSTableRowView: NSTableRowView {
     
