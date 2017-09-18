@@ -4,7 +4,7 @@
 === 2017-9-18日更新 ===
 在详情页面增加了分享功能、在浏览器中打开按钮。
 
-![](http://ss1.sinaimg.cn/large/aa2320a8gy1fjnpmsa095j20o40bkgnb&690)
+![](https://syy.freep.cn/588778/1BFAC168-DB08-4B9B-9EC4-04E8CE009D08.png)
 
 
 轻芒是我非常喜欢的一个产品，如果你也喜欢阅读轻芒，不妨试试我开发的Mac版，原生cocoa实现，极简界面，配合上MacBook惊艳的retina屏幕，能给您带来浏览精美杂志的愉悦体验。
