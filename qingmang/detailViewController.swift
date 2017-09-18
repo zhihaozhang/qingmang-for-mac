@@ -13,6 +13,7 @@ class detailViewController: NSViewController {
    
     @IBOutlet var webview: WKWebView!
     var url :NSURL!
+    var articleName :String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,12 @@ class detailViewController: NSViewController {
     
 
     @IBAction func shareClicked(_ sender: Any) {
-     
-        
+        var articleName = self.articleName!
+        var url = self.url!
+        let item = "\(articleName)  \(url) 来自青芒Mac客户端"
+        let picker = NSSharingServicePicker(items:[item])
+        picker.show(relativeTo: .zero, of: sender as! NSView, preferredEdge: .minY)
+
     
     }
    
@@ -37,6 +42,7 @@ class detailViewController: NSViewController {
         NSWorkspace.shared().open(url as URL)
     }
     
+    @IBOutlet var shareClicked: NSButtonCell!
    
     
 }

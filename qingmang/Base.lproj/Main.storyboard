@@ -1374,7 +1374,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="shareClicked" destination="PpN-X5-nKf" id="9gr-6V-vFG"/>
+                        <outlet property="shareClicked" destination="E1L-9Z-fde" id="Pey-nd-Ed1"/>
                         <outlet property="view" destination="u46-9c-nop" id="Cow-UB-Yf2"/>
                         <outlet property="webview" destination="zKN-xh-Yb2" id="Vpu-F6-7Ps"/>
                     </connections>
