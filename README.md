@@ -18,15 +18,15 @@
 
 在详情页面增加了分享功能、在浏览器中打开按钮。
 
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmt21br33xj31kw11itr3.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmt232026ij31kw11iww9.jpg)
 
 === 2017-08-30日更新 ===
 
 增加了通知中心视图和TouchBar视图
 
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmt21cvmukj30hs0q6409.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmt232p513j30hs0q6acp.jpg)
 
-![](https://ws2.sinaimg.cn/large/006tKfTcgy1fmt21ds0bhj30hs0dc74p.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fmt2332oi2j30hs0dcq3q.jpg)
 
 === 第一次更新 ===
 
@@ -34,4 +34,4 @@
 系统的界面是模仿的知乎日报的mac客户端（知了），icon出自非著名设计师Joseph之手，一并表示感谢！
 
 系统界面：
-![](https://ws2.sinaimg.cn/large/006tKfTcgy1fmt21fxxtvj31kw16cnit.jpg)
+![](https://ws3.sinaimg.cn/large/006tKfTcgy1fmt2347z14j31kw16c1ej.jpg)
