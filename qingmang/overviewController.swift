@@ -166,10 +166,10 @@ class overviewController: NSViewController,NSTableViewDelegate,NSTableViewDataSo
         guard let vw = tableView.make(withIdentifier: "Cell", owner: self) as? Cell else { return nil }
         guard self.feed!["articles"][row]["title"].string != nil else {return nil}
         vw.textView?.string = ""
-        vw.textView?.string = self.feed!["articles"][row]["title"].string! as! String
+        vw.textView?.string = self.feed!["articles"][row]["title"].string!
         
-        guard self.feed!["articles"][row]["covers"][0]["url"].string != nil else {return nil}
-        vw.imageView?.image = NSImage(byReferencing: URL(string: self.feed!["articles"][row]["covers"][0]["url"].string as! String)!)
+        guard self.feed!["articles"][row]["images"][0]["url"].string != nil else {return nil}
+        vw.imageView?.image = NSImage(byReferencing: URL(string: self.feed!["articles"][row]["images"][0]["url"].string as! String)!)
         
              
         return vw
